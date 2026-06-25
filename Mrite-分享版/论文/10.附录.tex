@@ -1,0 +1,31 @@
+
+\makeatletter
+\let\@oldaddcontentsline\addcontentsline
+\renewcommand{\addcontentsline}[3]{}
+\section*{附录}
+\let\addcontentsline\@oldaddcontentsline
+\makeatother
+
+% A092附录格式：先列出文件清单表格，再逐一贴出代码
+% 附录1：文件清单（所有代码文件的说明表）
+% 附录2-N：各代码文件内容（MATLAB/Python）
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.54\textwidth}}
+  \caption{附件说明表}
+  \label{tab:appendix} \\
+  \toprule
+  文件名 & 说明 \\
+  \midrule
+  \endfirsthead
+  \caption{附件说明表（续）} \\
+  \toprule
+  文件名 & 说明 \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  问题一\_xxx.py & 问题一求解代码 \\
+  问题二\_xxx.py & 问题二求解代码 \\
+  问题三\_xxx.py & 问题三求解代码 \\
+  xxx.xlsx & 结果数据文件 \\
+\end{longtable}

@@ -1,0 +1,59 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{模型检验与分析}
+
+% A092风格：模型检验嵌入在每问求解末尾（见5.X.2），本章作为汇总性检验
+% 如各问均已在5.X.2中包含模型检验，本章可整合对比结果
+
+为验证本文构建的各问题模型的有效性和稳健性，进行以下汇总检验。
+
+\subsection{误差分析}
+
+\begin{longtable}{>{\centering\arraybackslash}p{0.16\textwidth}>{\centering\arraybackslash}p{0.18\textwidth}>{\centering\arraybackslash}p{0.18\textwidth}>{\centering\arraybackslash}p{0.18\textwidth}>{\centering\arraybackslash}p{0.18\textwidth}}
+  \caption{各问题模型误差分析结果}
+  \label{tab:error} \\
+  \toprule
+  指标 & 问题一 & 问题二 & 问题三 & 说明 \\
+  \midrule
+  \endfirsthead
+  \caption{各问题模型误差分析结果（续）} \\
+  \toprule
+  指标 & 问题一 & 问题二 & 问题三 & 说明 \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  $R^2$ & ... & ... & ... & 决定系数 \\
+  RMSE & ... & ... & ... & 均方根误差 \\
+  相对误差 & ... & ... & ... & 百分比 \\
+\end{longtable}
+
+如表\ref{tab:error}所示，...
+
+\subsection{灵敏度分析}
+
+% A092风格：通过随机生成100组可行解验证最优解的质量
+为进一步验证优化结果的稳健性，我们随机生成了100组可行解，与最优解进行对比，如图\ref{fig:sensitivity}所示。
+
+\begin{figure}[H]
+  \centering
+%   \includegraphics[width=0.8\textwidth]{../求解/问题一/图片/灵敏度分析.png}  % 求解后替换实际路径
+  \caption{随机可行解与最优解对比}
+  \label{fig:sensitivity}
+\end{figure}
+
+如图\ref{fig:sensitivity}所示，...，这有力地说明了本文的优化方案是有效且合理的。
+
+\subsection{优化率对比}
+
+% A092特有：三个问题之间的优化率对比（直方图展示）
+为了直观体现优化程度，我们将问题一、问题二、问题三的关键指标以直方图形式进行对比，如图\ref{fig:compare}所示。
+
+\begin{figure}[H]
+  \centering
+%   \includegraphics[width=0.8\textwidth]{../求解/问题三/图片/三问对比.png}  % 求解后替换实际路径
+  \caption{问题一、问题二、问题三关键指标对比}
+  \label{fig:compare}
+\end{figure}
+
+通过观察图像，我们发现...，相较于问题一的优化率为...\%，相较于问题二的优化率为...\%，这有力地说明了我们的进一步优化设计是有效且合理的。
